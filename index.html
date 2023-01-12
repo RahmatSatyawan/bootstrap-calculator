@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Project Fundamental Kalkulator Bootstrap"
+    />
+    <meta name="author" content="Rahmat S" />
+
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="../src/css/style.css" />
+
+    <title>Inosoft Bootcamp</title>
+    <link rel="icon" type="image/png" href="src/img/inosoft-logo.png" />
+  </head>
+  <body>
+    <div class="container-fluid w-100% dark-mode">
+      <!-- darkmode-toggle -->
+      <div class="row">
+        <div class="col">
+          <input type="checkbox" id="darkmode_toggle" />
+          <label for="darkmode_toggle">
+            <img class="moon" src="./src/img/moon.svg" alt="" />
+            <img class="sun" src="./src/img/sun.svg" alt="" />
+          </label>
+        </div>
+      </div>
+      <!-- Display Number -->
+      <div class="screen">
+        <input
+          class="container-fluid"
+          type="text"
+          name=""
+          id="main_screen"
+          placeholder="0"
+        />
+        <input
+          class="container-fluid"
+          type="text"
+          name=""
+          id="second_screen"
+          placeholder="0"
+          disabled
+        />
+        <!-- <div class="col" id="second_screen"><p>0</p></div> -->
+      </div>
+      <!-- Button Number -->
+      <div class="container-fluid container-button w-100%">
+        <div class="row">
+          <div class="col">
+            <button class="btn text-tosca" id="ac">AC</button>
+          </div>
+          <div class="col">
+            <button class="btn text-tosca" id="sign">+/-</button>
+          </div>
+          <div class="col">
+            <button class="btn text-tosca" id="percent">%</button>
+          </div>
+          <div class="col">
+            <button class="operator btn text-red" id="divide">/</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="number btn" id="7">7</button>
+          </div>
+          <div class="col">
+            <button class="number btn" id="8">8</button>
+          </div>
+          <div class="col">
+            <button class="number btn" id="9">9</button>
+          </div>
+          <div class="col">
+            <button class="operator btn text-red" id="times">*</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="number btn" id="4">4</button>
+          </div>
+          <div class="col">
+            <button class="number btn" id="5">5</button>
+          </div>
+          <div class="col">
+            <button class="number btn" id="6">6</button>
+          </div>
+          <div class="col">
+            <button class="operator btn text-red" id="minus">-</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="number btn" id="1">1</button>
+          </div>
+          <div class="col">
+            <button class="number btn" id="2">2</button>
+          </div>
+          <div class="col">
+            <button class="number btn" id="3">3</button>
+          </div>
+          <div class="col">
+            <button class="operator btn text-red" id="plus">+</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn" id="ce">C</button>
+          </div>
+          <div class="col">
+            <button class="number btn" id="0">0</button>
+          </div>
+          <div class="col">
+            <button class="operator btn" id="dot">.</button>
+          </div>
+          <div class="col">
+            <button class="btn text-red" id="equal">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap Bundle JS-->
+    <!-- attached at end body -->
+    <script src="./src/js/main.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

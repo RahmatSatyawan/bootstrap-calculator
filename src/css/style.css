@@ -1,0 +1,166 @@
+@import "https://fonts.googleapis.com/css?family=Share+Tech+Mono";
+
+:root {
+  --bg-background: rgb(207, 206, 207);
+  --bg-dark: rgb(35, 37, 44);
+  --bg-dark-card: rgb(74, 79, 88);
+  --bg-light: rgb(255, 254, 255);
+  --bg-light-card: rgb(240, 240, 240);
+  --text-red: rgb(220, 110, 105);
+  --text-tosca: rgb(101, 239, 214);
+  --text-light: rgb(255, 255, 255);
+  --text-dark: rgb(33, 32, 43);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-background);
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.container-fluid {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  border-radius: 30px;
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+label {
+  width: 60px;
+  height: 30px;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  background: var(--bg-light);
+  border-radius: 60px;
+  border: 1px solid gray;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+label:after {
+  content: "";
+  width: 35%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  background: var(--bg-dark);
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+#darkmode_toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+input:checked + label {
+  background: var(--bg-dark);
+}
+
+input:checked + label:after {
+  left: 90%;
+  transform: translateX(-100%);
+  background: var(--bg-light);
+}
+
+label img {
+  position: absolute;
+  height: 50%;
+  top: 7px;
+}
+
+label .sun {
+  left: 10px;
+  color: white;
+}
+
+label .moon {
+  right: 10px;
+}
+
+.text-red {
+  color: var(--text-red) !important;
+}
+
+.text-tosca {
+  color: var(--text-tosca) !important;
+}
+
+.dark-mode .screen > * {
+  color: var(--text-light) !important;
+  background: var(--bg-dark) !important;
+}
+
+.screen {
+  padding: 20px 40px;
+}
+
+#main_screen {
+  font-size: 2.5em;
+  border: none;
+  box-shadow: none;
+  border-radius: none;
+}
+
+#main_screen,
+#second_screen,
+input {
+  text-align: right;
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  box-shadow: none;
+  border-radius: none;
+}
+
+.container-button {
+  background: var(--bg-light-card);
+  padding: 40px 40px;
+  display: inline-block;
+  text-align: center;
+}
+
+.dark-mode .container-button {
+  background: var(--bg-dark-card);
+}
+
+.container-button button {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  border: 1px solid var(--bg-light);
+}
+
+.dark-mode .container-button button {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  border: 1px solid var(--bg-dark);
+}
+
+button {
+  width: 90%;
+  margin: 5px;
+  border-radius: 20%;
+}
+
+.btn:hover {
+  box-shadow: 0 0 rgba(0, 0, 0, 0.4);
+  border-bottom-width: 1px;
+  transform: translateY(2px);
+}
